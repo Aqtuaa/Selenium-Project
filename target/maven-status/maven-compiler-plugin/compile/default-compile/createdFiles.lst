@@ -1,6 +1,2 @@
-com\example\autotest\driver\DriverFactory.class
-com\example\autotest\runner\TestRunner.class
 com\example\autotest\Main.class
-com\example\autotest\Main$1.class
-com\example\autotest\model\TestResult.class
-com\example\autotest\runner\AutomatedTest.class
+com\example\autotest\tests\LmsTest.class
