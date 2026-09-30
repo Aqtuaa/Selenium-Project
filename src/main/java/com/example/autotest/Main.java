@@ -6,6 +6,7 @@ import org.junit.platform.launcher.LauncherDiscoveryRequest;
 import org.junit.platform.launcher.core.LauncherFactory;
 import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 import org.junit.platform.launcher.listeners.TestExecutionSummary;
+import io.javalin.http.staticfiles.Location;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -19,6 +20,7 @@ public class Main {
 
     public static void main(String[] args) {
         Javalin app = Javalin.create(config -> {
+            config.staticFiles.add("/public", Location.CLASSPATH);
             config.bundledPlugins.enableCors(cors -> {
                 cors.addRule(it -> it.anyHost());
             });

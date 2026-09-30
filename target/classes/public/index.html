@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINUS LMS Automation Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>BINUS LMS Automation Test</h1>
+            <p class="subtitle">Selenium + JUnit &middot; Course: Automation Testing (LEC)</p>
+        </header>
+
+        <section class="cards">
+            <article class="card" id="card-open-course">
+                <h2>1. Open Course</h2>
+                <p>Buka course Automation Testing sampai materi "1. Introduction to Software Testing".</p>
+                <button class="run-btn" data-endpoint="/api/test/open-course" data-target="card-open-course">Run Test</button>
+                <div class="result"></div>
+            </article>
+
+            <article class="card" id="card-forum">
+                <h2>2. Create Forum Thread</h2>
+                <p>Buat thread baru di forum Automation Testing, lalu post.</p>
+                <button class="run-btn" data-endpoint="/api/test/forum" data-target="card-forum">Run Test</button>
+                <div class="result"></div>
+            </article>
+
+            <article class="card" id="card-lamp">
+                <h2>3. Give Lamp Reaction</h2>
+                <p>Buka thread di Session 1, lalu beri reaksi lampu. Butuh minimal 1 thread yang sudah ada.</p>
+                <button class="run-btn" data-endpoint="/api/test/lamp" data-target="card-lamp">Run Test</button>
+                <div class="result"></div>
+            </article>
+        </section>
+
+        <p class="note">Test dijalankan satu per satu. Chrome akan terbuka otomatis, jadi jangan ditutup sampai hasilnya muncul.</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

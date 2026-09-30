@@ -26,7 +26,6 @@ public class LmsTest {
                 wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
                 driver.get("https://binusmaya.binus.ac.id/");
-                System.out.println("Buka Bimay");
 
                 String originalWindow = driver.getWindowHandle();
 
@@ -71,7 +70,7 @@ public class LmsTest {
                 wait.until(ExpectedConditions.elementToBeClickable(
                         By.xpath("//span[text()='1. Introduction to Software Testing']"))).click();
 
-                Thread.sleep(3000);
+                Thread.sleep(5000);
         }
 
     // ===================== TEST 2: CREATE FORUM THREAD =====================
@@ -185,6 +184,8 @@ public class LmsTest {
 
                 wait.until(ExpectedConditions.elementToBeClickable(
                         By.id("button-like"))).click();
+
+                Thread.sleep(1500);
         }
     // ===================== HELPER =====================
         private WebDriver openWithLoggedInProfile() {
